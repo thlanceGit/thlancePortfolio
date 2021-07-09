@@ -1,0 +1,283 @@
+/* || Universal Selectors || */
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* |||| Element Selectors |||| */
+body {
+    background-color:honeydew;
+    position: relative;
+}
+
+body figure {
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+body figcaption {
+    position: relative;
+    top: 237px;
+    display: flex;
+    justify-content: right;
+    float: right;
+    color:snow;
+    background: slategray;
+    padding: 20px;
+    border: 2px double steelblue;
+    opacity: 85%;
+    border-top-left-radius: 20px;
+    width: fit-content;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color:slategray;
+    position: fixed;
+    opacity: 80%;
+    z-index: 1;
+    border-bottom: 6px double steelblue;
+}
+
+header h1 {
+    display:flex;
+    font-size: xx-large;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+    margin: auto auto auto 10px;
+}
+
+header nav {
+    display: flex;
+    margin: 0 10px 0 auto;
+}
+
+header ol {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header li {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    align-content: center;
+    padding: 10px;
+    margin: 0 10px 0 10px;
+}
+
+header a {
+    text-decoration: none;
+    font-size: x-large;
+    color:snow;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: slategray;
+    border-top: 6px double steelblue;
+    height: 2.5em;
+}
+
+footer h5 {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+/* |||||| Unique id selectors |||||| */
+#logo {
+    display:flex;
+    font-size: xx-large;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+    margin: auto auto auto 10px;
+}
+
+#contentWrap { /* wraps the content of body other than footer to pad footer */
+    padding-bottom: 5em;
+}
+
+#aboutMe {
+    display: flex;
+    margin-top: 2em;
+    align-content: center;
+}
+
+#aboutMe h2 {
+    margin: 0 2em 0 2em;
+    font-size: xx-large;
+    border-right: 6px solid slategray;
+    padding-right: 1em;
+}
+
+#aboutMe p {
+    background-color:steelblue;
+    padding: 1em;
+    text-align:center;
+}
+
+#examples {
+    display: grid;
+    grid-template-columns: 20em 20em 20em;
+    grid-template-rows: 10em 5em 5em;
+    gap: 2px;
+    margin-top: 2em;
+}
+
+#examples a {
+    text-decoration: none;
+    color:black;
+}
+
+#examples h2 {
+    grid-area: 1 / 1 / 6 / 1;
+    margin: 0 2em 0 2em;
+    font-size: xx-large;
+    border-right: 6px solid slategray;
+    padding-right: 1em;
+}
+
+#examples article {
+    background-color: steelblue;
+}
+
+#examples article:hover {
+    border: 3px double gold;
+    background-color: slategray;
+    background-blend-mode: darken;
+}
+
+#catMouse {
+    padding: 10px;
+    grid-area: 1 / 2 / 1 / 4;
+}
+
+#ledWall {
+    padding: 10px;
+    grid-area: 2 / 2 / 2 / 3;
+}
+
+#calculator {
+    padding: 10px;
+    grid-area: 2 / 3 / 2 / 4;
+}
+
+#pastelPuzzles {
+    padding: 10px;
+    grid-area: 3 / 2 / 3 / 3;
+}
+
+#runBuddy {
+    padding: 10px;
+    grid-area: 3 / 3 / 3 / 4;
+}
+
+#contactMe {
+    display: flex;
+    align-content: center;
+    margin-top: 2em;
+}
+
+#contactMe h2 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 2em 0 2em;
+    font-size: xx-large;
+    border-right: 6px solid slategray;
+    padding-right: 1em;
+}
+
+#contactMe ol > li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#contactMe a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+#resume section {
+    display: flex;
+    margin-top: 2em;
+    align-items: center;
+}
+
+#resume section h1 {
+    margin: 0 2em 0 2em;
+    font-size: xx-large;
+    border-right: 6px solid slategray;
+    padding-right: 1em;
+    text-align: center;
+}
+
+#resume section div {
+    text-align: center;
+}
+
+#resume section div p {
+    padding: 1em;
+}
+
+/* |||||||| Media screen responses |||||||| */
+
+@media screen and (max-width: 650px) {
+
+    header {
+        display: block;
+    }
+    header h1 {
+        text-align: left;
+        margin: 10px 10px 0 10px;
+    }
+    header ol {
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+
+    header {
+        display: block;
+        width: initial;
+    }
+    header h1 {
+        text-align: left;
+        margin: 10px 10px 0 10px;
+    }
+    header ol {
+        display: block;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    body figure {
+        width:max-content;
+    }
+}
