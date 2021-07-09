@@ -6,6 +6,6 @@ I've attempted to make this responsive to different screen viewing sizes, but wi
 
 Mostly I have tried to practice flexbox and grid layout methods to help alignment and sizing.
 
-Screenshot:![Screenshot](.docs/images/screenshot.png)
+Screenshot:![Screenshot](./docs/images/screenshot.png)
 
 URL: 
