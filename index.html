@@ -22,7 +22,7 @@
             </nav>
         </header>
 
-        <figure aria-label="someday I will consume you" title="for now I feed you"> 
+        <figure id="headFig" aria-label="someday I will consume you" title="for now I feed you"> 
             <figcaption>Human web developer</figcaption>
         </figure>
 
@@ -35,13 +35,14 @@
 
             <section id="examples">
                 <h2>Examples</h2>
-                <!-- Wrapping whole section in anchor so the box is a link -->
-                <a href="https://scratch.mit.edu/projects/544743038" target="_blank" alt="MIT Scratch game by thlance" title="Cat Mouse and Ball">
-                <article id="catMouse">
+                <!-- Wrapping whole section in anchor so the box is a link, retargeted id -->
+                <a id="catMouse" href="https://scratch.mit.edu/projects/544743038" target="_blank" alt="MIT Scratch game by thlance" title="Cat Mouse and Ball">
+                <article>
                     <h3>Cat Mouse and Ball </h3>
                         <h4>Scratch</h4>
-                </a>
+                    <figure aria-label="Cat mouse and ball game" title="Cat Mouse and Ball"></figure>
                 </article>
+                </a>
                 <article id="ledWall">
                     <h3>LED Wall</h3>
                         <h4>Node/IoT</h4>

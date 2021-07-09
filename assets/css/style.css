@@ -5,36 +5,10 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
 /* |||| Element Selectors |||| */
 body {
     background-color:honeydew;
     position: relative;
-}
-
-body figure {
-    background-image: url("../images/banner.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 20px;
-}
-
-body figcaption {
-    position: relative;
-    top: 237px;
-    display: flex;
-    justify-content: right;
-    float: right;
-    color:snow;
-    background: slategray;
-    padding: 20px;
-    border: 2px double steelblue;
-    opacity: 85%;
-    border-top-left-radius: 20px;
-    width: fit-content;
 }
 
 header {
@@ -118,6 +92,32 @@ footer h5 {
     padding-bottom: 5em;
 }
 
+/* Moved header figure styles here as to not conflict with other figures in the body */
+#headFig {
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+#headFig figcaption {
+    position: relative;
+    top: 237px;
+    display: flex;
+    justify-content: right;
+    float: right;
+    color:snow;
+    background: slategray;
+    padding: 20px;
+    border: 2px double steelblue;
+    opacity: 85%;
+    border-top-left-radius: 20px;
+    width: fit-content;
+}
+
 #aboutMe {
     display: flex;
     margin-top: 2em;
@@ -140,7 +140,7 @@ footer h5 {
 #examples {
     display: grid;
     grid-template-columns: 20em 20em 20em;
-    grid-template-rows: 10em 5em 5em;
+    grid-template-rows: 1fr .5fr .5fr;
     gap: 2px;
     margin-top: 2em;
 }
@@ -169,8 +169,16 @@ footer h5 {
 }
 
 #catMouse {
-    padding: 10px;
     grid-area: 1 / 2 / 1 / 4;
+}
+
+#catMouse article {
+    padding: 10px;
+    background-image: url(../images/catmouseball.png);
+    height: 150px;
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
 }
 
 #ledWall {
