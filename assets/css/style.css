@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amethysta&display=swap');
 /* || Universal Selectors || */
 * {
     margin: 0;
     padding: 0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --headerFont: 'Abril Fatface', cursive;
+    --bodyFont: 'Amethysta', serif;
 }
 
 /* |||| Element Selectors |||| */
@@ -18,21 +24,14 @@ header {
     position: fixed;
     opacity: 80%;
     z-index: 1;
-    border-bottom: 6px double steelblue;
-}
-
-header h1 {
-    display:flex;
-    font-size: xx-large;
-    font-weight: bold;
-    align-content: center;
-    text-align: center;
-    margin: auto auto auto 10px;
+    border-bottom: .4rem double steelblue;
+    font-family: var(--headerFont, 'Trebuchet MS');
+    font-stretch: 115%;
 }
 
 header nav {
     display: flex;
-    margin: 0 10px 0 auto;
+    margin: 0 .5rem 0 auto;
 }
 
 header ol {
@@ -46,8 +45,8 @@ header li {
     justify-content: flex-end;
     text-align: center;
     align-content: center;
-    padding: 10px;
-    margin: 0 10px 0 10px;
+    padding: .5rem;
+    margin: 0 .5rem 0 .5rem;
 }
 
 header a {
@@ -62,30 +61,83 @@ main {
     align-items: center;
 }
 
+main section {
+    display: flex;
+}
+
+h1 {
+    font-size: 2em;
+    font-family: var(--headerFont, 'Trebuchet MS');
+    font-stretch: 115%;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: var(--headerFont, 'Trebuchet MS');
+    font-stretch: 115%;
+}
+
+h3 {
+    font-family: var(--bodyFont, 'Trebuchet MS');
+    overflow: clip;
+}
+
+h4 {
+    font-family: var(--bodyFont, 'Trebuchet MS');
+    overflow: clip;
+}
+
+p {
+    font-family: var(--bodyFont, 'Trebuchet MS');
+    overflow: clip;
+}
+
+a:hover {
+    text-shadow: .1rem .1rem .1rem gold;
+}
+
+a:active {
+    text-shadow: .1rem .1rem .1rem gold;
+}
+
+figcaption {
+    font-family: var(--bodyFont, 'Trebuchet MS');
+}
+
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     background-color: slategray;
-    border-top: 6px double steelblue;
-    height: 2.5em;
+    border-top: .4rem double steelblue;
+    font-family: var(--headerFont, 'Trebuchet MS');
+    font-stretch: 115%;
 }
 
 footer h5 {
     text-align: center;
-    font-size: xx-large;
+    font-size: 2em;
     font-weight: bold;
+}
+
+/* |||||| Class id selectors |||||| */
+.spreader {
+    border-right: .3rem groove;
+    border-color: slategray steelblue;
+    border-radius: .1rem;
+    box-shadow: 0.4em 0em 0.8em 0.3em steelblue;
+    margin: 0em 2em 0 1em;
 }
 
 
 /* |||||| Unique id selectors |||||| */
 #logo {
     display:flex;
-    font-size: xx-large;
+    font-size: 2em;
     font-weight: bold;
     align-content: center;
     text-align: center;
-    margin: auto auto auto 10px;
+    margin: auto auto auto .5rem;
 }
 
 #contentWrap { /* wraps the content of body other than footer to pad footer */
@@ -99,121 +151,176 @@ footer h5 {
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 300px;
+    height: 420px;
     margin-bottom: 20px;
 }
 
 #headFig figcaption {
     position: relative;
-    top: 237px;
-    display: flex;
-    justify-content: right;
+    top: 85%;
     float: right;
     color:snow;
     background: slategray;
-    padding: 20px;
+    padding: 1.25rem;
     border: 2px double steelblue;
     opacity: 85%;
-    border-top-left-radius: 20px;
-    width: fit-content;
+    border-top-left-radius: 1.5rem;
 }
 
 #aboutMe {
-    display: flex;
-    margin-top: 2em;
-    align-content: center;
+    margin: 2em 2em 0em 2em;
 }
 
-#aboutMe h2 {
-    margin: 0 2em 0 2em;
-    font-size: xx-large;
-    border-right: 6px solid slategray;
-    padding-right: 1em;
+#aboutCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#photoFig {
+    margin-top: .3rem;
+    background-image: url("../images/dreamed3-2021PhotoSmaller.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 200px;
 }
 
 #aboutMe p {
-    background-color:steelblue;
+    color:steelblue;
     padding: 1em;
     text-align:center;
+    font-size: 1.25em;
+    padding: 1.25rem;
+    width: 50%;
+}
+
+#exampleLeft {
+    display: flex;
+    justify-self: flex-start;
+    font-size: 2em;
+    margin-left: 2em;
 }
 
 #examples {
-    display: grid;
-    grid-template-columns: 20em 20em 20em;
-    grid-template-rows: 1fr .5fr .5fr;
-    gap: 2px;
-    margin-top: 2em;
+    display: flex;
+    margin: 2em 2em 0em 2em;
+    width: 100%;
+    justify-content: center;
 }
 
-#examples a {
+#exContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 30%;
+    padding: .3rem;
+    background-color: steelblue;
+}
+
+#exContainer a {
     text-decoration: none;
     color:black;
 }
 
-#examples h2 {
-    grid-area: 1 / 1 / 6 / 1;
-    margin: 0 2em 0 2em;
-    font-size: xx-large;
-    border-right: 6px solid slategray;
-    padding-right: 1em;
+#moreEx {
+    display: flex;
+    margin-top: .2rem;
+    width: 100%;
 }
 
-#examples article {
-    background-color: steelblue;
+#moreExLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
 }
 
-#examples article:hover {
-    border: 3px double gold;
+#moreExRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+}
+
+#moreEx .example {
+    margin-bottom: .2rem;
+}
+
+.example {
+    display: flex;
+    flex-direction: column;
+    border: .2rem double transparent;
+}
+
+.example > h3, .example > h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.example:hover {
+    border: .2rem double gold;
     background-color: slategray;
     background-blend-mode: darken;
 }
 
-#catMouse {
-    grid-area: 1 / 2 / 1 / 4;
+.example:active {
+    border: .2rem double gold;
+    background-color: slategray;
+    background-blend-mode: darken;
 }
 
-#catMouse article {
-    padding: 10px;
-    background-image: url(../images/catmouseball.png);
-    height: 150px;
+#featuredEx article {
+    padding: .3rem 1rem 5rem .3rem;
+    background-image: url(../images/recipeChampion.png);
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#weather article {
+    padding: .3rem 1rem 1.5rem .3rem;
+    background-image: url(../images/weatherSH.png);
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
 }
 
-#ledWall {
-    padding: 10px;
-    grid-area: 2 / 2 / 2 / 3;
+#scheduler article {
+    padding: .3rem 1rem 1.5rem .3rem;
+    background-image: url(../images/schedulerSH.png);
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
 }
 
-#calculator {
-    padding: 10px;
-    grid-area: 2 / 3 / 2 / 4;
+#catMouse article {
+    padding: .3rem 1rem 1.5rem .3rem;
+    background-image: url(../images/catmouseball.png);
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
 }
 
-#pastelPuzzles {
-    padding: 10px;
-    grid-area: 3 / 2 / 3 / 3;
-}
-
-#runBuddy {
-    padding: 10px;
-    grid-area: 3 / 3 / 3 / 4;
+#pwGen article {
+    padding: .3rem 1rem 1.5rem .3rem;
+    background-image: url(../images/pwGenSH.png);
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
 }
 
 #contactMe {
-    display: flex;
-    align-content: center;
-    margin-top: 2em;
+    justify-content: center;
+    margin: 2em 2em 0 2em;
 }
 
 #contactMe h2 {
     display: flex;
     justify-content: flex-start;
-    margin: 0 2em 0 2em;
-    font-size: xx-large;
-    border-right: 6px solid slategray;
-    padding-right: 1em;
 }
 
 #contactMe ol > li {
@@ -221,6 +328,7 @@ footer h5 {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    font-family: var(--bodyFont, 'Trebuchet MS');
 }
 
 #contactMe a {
@@ -228,16 +336,22 @@ footer h5 {
     color: steelblue;
 }
 
+#resume p {
+    font-size: 1.25em;
+    font-family: var(--bodyFont, 'Trebuchet MS');
+    color: steelblue;
+}
+
 #resume section {
     display: flex;
-    margin-top: 2em;
+    margin: 2em 2em 0 2em;
     align-items: center;
 }
 
 #resume section h1 {
     margin: 0 2em 0 2em;
-    font-size: xx-large;
-    border-right: 6px solid slategray;
+    font-size: 2em;
+    border-right: .3rem solid slategray;
     padding-right: 1em;
     text-align: center;
 }
@@ -251,20 +365,27 @@ footer h5 {
 }
 
 /* |||||||| Media screen responses |||||||| */
+@media screen and (max-width: 1085px) {
+    #moreEx {
+        flex-direction: column;
+    }
+    #moreEx div {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 650px) {
 
     header {
         display: block;
     }
-    header h1 {
-        text-align: left;
-        margin: 10px 10px 0 10px;
-    }
     header ol {
         justify-content: space-between;
-        padding-bottom: 10px;
     }
+    #headFig figcaption {
+        top: 89%;
+        padding: .7rem;
+    } 
 }
 
 @media screen and (max-width: 490px) {
@@ -272,10 +393,8 @@ footer h5 {
     header {
         display: block;
         width: initial;
-    }
-    header h1 {
-        text-align: left;
-        margin: 10px 10px 0 10px;
+        border-right: .3rem double steelblue;
+        border-bottom-right-radius: 1.5rem;
     }
     header ol {
         display: block;

@@ -27,59 +27,81 @@
         </figure>
 
         <main>
-
+            
             <section id="aboutMe">
-                <h2>About Me</h2>
-                <p>I am a human on planet Earth studying web application programming.</p>
+                <div id="aboutCont">
+                    <h2>About Me</h2>
+                    <figure id="photoFig" aria-label="thlance" alt="thlance"></figure>
+                </div>
+                <div class="spreader"></div>
+                <p>I am a human on planet Earth studying web application programming. <br>
+                Improving a little.
+                </p>
             </section>
 
             <section id="examples">
-                <h2>Examples</h2>
-                <!-- Wrapping whole section in anchor so the box is a link, retargeted id -->
-                <a id="catMouse" href="https://scratch.mit.edu/projects/544743038" target="_blank" alt="MIT Scratch game by thlance" title="Cat Mouse and Ball">
-                <article>
-                    <h3>Cat Mouse and Ball </h3>
-                        <h4>Scratch</h4>
-                    <figure aria-label="Cat mouse and ball game" title="Cat Mouse and Ball"></figure>
-                </article>
-                </a>
-                <article id="ledWall">
-                    <h3>LED Wall</h3>
-                        <h4>Node/IoT</h4>
-                </article>
-                <article id="calculator">
-                    <h3>Calculator</h3>
-                        <h4>React/JavaScript/CSS</h4>
-                </article>
-                <article id="pastelPuzzles">
-                    <h3>Pastel Puzzles</h3>
-                        <h4>MERN Stack</h4>
-                </article>
-                <article id="runBuddy">
-                    <h3>Run Buddy</h3>
-                        <h4>HTML/CSS</h4>
-                </article>
-            </section>
-
-            <section id="contactMe">
-                <h2>Contact Me</h2>
-                <nav>
-                    <ol>
-                        <li><a href="mailto:thlance@ucdavis.edu" target="_blank">Email</a></li>
-                        <li><a href="https://github.com/thlanceGit" target="_blank">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/tucker-lance-875b7b63/" target="_blank">LinkedIn</a></li>
-                    </ol>
-                </nav>
-            </section>
-
-            <section id="resume">
-
-            </section>
-
+                <h2 id="exampleLeft">Examples</h2>
+                <div class="spreader"></div>
+                <div id="exContainer">
+                    <div class="example" id="featuredEx">
+                        <a id="recChamp" href="https://thlancegit.github.io/recipe-champion/" target="_blank" alt="Recipe finder by ingredients" title="Recipe Champion">
+                            <article>
+                                <h3>Recipe Champion (Collab)</h3>
+                                    <h4>HTML/CSS/JSS</h4>
+                                <figure aria-label="Recipe finder by ingredients" title="Recipe Champion"></figure>
+                            </article>
+                        </a>
+                    </div>
+                    <div id="moreEx">
+                        <div id="moreExLeft">
+                            <a id="weather" href="https://thlancegit.github.io/thlanceWeather/" target="_blank" alt="Quick weather search" title="Quick Weather">
+                                <article class="example">
+                                    <h3>Quick Weather</h3>
+                                        <h4>HTML/CSS/JSS/OpenWeather API</h4>
+                                    <figure aria-label="Quick weather search" title="Quick Weather"></figure>
+                                </article>
+                            </a>
+                            <a id="scheduler" href="https://thlancegit.github.io/thlanceScheduler/" target="_blank" alt="Scheduler for work hours" title="Work Day Scheduler">
+                                <article class="example">
+                                    <h3>Work Day Scheduler</h3>
+                                        <h4>HTML/CSS/JSS</h4>
+                                    <figure aria-label="Work Day Scheduler search" title="Work Day Scheduler"></figure>
+                                </article>
+                            </a>
+                        </div>
+                        <div id="moreExRight">
+                            <a id="catMouse" href="https://scratch.mit.edu/projects/544743038" target="_blank" alt="MIT Scratch game by thlance" title="Cat Mouse and Ball">
+                                <article class="example">
+                                        <h3>Cat Mouse and Ball</h3>
+                                            <h4>Scratch</h4>
+                                        <figure aria-label="Cat mouse and ball game" title="Cat Mouse and Ball"></figure>
+                                </article>
+                            </a>
+                            <a id="pwGen" href="https://thlancegit.github.io/thlancePWGen/" target="_blank" alt="Password generator" title="Password generator">
+                                <article class="example">
+                                    <h3>Password Generator</h3>
+                                        <h4>HTML/CSS/JSS</h4>
+                                    <figure aria-label="Password generator" title="Password generator"></figure>
+                                </article>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+         
+                <section id="contactMe">
+                    <h2>Contact Me</h2>
+                    <div class="spreader"></div>
+                    <nav>
+                        <ol>
+                            <li><a href="mailto:thlance@ucdavis.edu" target="_blank">Email</a></li>
+                            <li><a href="https://github.com/thlanceGit" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/tucker-lance-875b7b63/" target="_blank">LinkedIn</a></li>
+                        </ol>
+                    </nav>
+                </section>
+            </div>
         </main>
-
-    </div> <!-- Closes the content wrapper div -->
-    
+    </div> 
     <footer>
         <h5>Made by thlance</h5>
     </footer>
