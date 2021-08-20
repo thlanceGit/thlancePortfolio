@@ -304,6 +304,9 @@ footer h5 {
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
+    height: 98px;
+    max-height: 98px;
+    width: 100%;
 }
 
 #pwGen article {
