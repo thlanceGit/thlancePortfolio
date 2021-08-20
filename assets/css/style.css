@@ -63,6 +63,7 @@ main {
 
 main section {
     display: flex;
+    justify-content: center;
 }
 
 h1 {
